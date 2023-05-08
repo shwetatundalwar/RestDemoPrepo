@@ -1,0 +1,20 @@
+package jIRA;
+import static io.restassured.RestAssured.*;
+import io.restassured.RestAssured;
+import io.restassured.path.json.JsonPath;
+
+public class JiraTest {
+
+	public static void main(String[] args) {
+		RestAssured.baseURI = "http://localhost:8080";
+		given().pathParam("id", "10002").log().all().body("{\r\n"
+				+ "    \"body\": \"This is My first comment\",\r\n"
+				+ "    \"visibility\": {\r\n"
+				+ "        \"type\": \"role\",\r\n"
+				+ "        \"value\": \"Administrators\"\r\n"
+				+ "    }\r\n"
+				+ "}").post("/rest/api/2/issue/{id}/comment").
+
+	}
+
+}

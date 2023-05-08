@@ -1,0 +1,18 @@
+package apiRest;
+
+import io.restassured.RestAssured;
+import static io.restassured.RestAssured.*;
+
+public class BasicApi {
+
+	public static void main(String[] args) {
+// validate if add place API place API is working as expected
+		
+		//given-all inpu dertails
+		//when-submit the api
+		//then-validate the response
+		
+		RestAssured.baseURI = "";
+	}
+
+}
